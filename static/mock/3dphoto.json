@@ -1,0 +1,37 @@
+{
+  "ret": true,
+  "data": {
+    "list": [
+      {
+        "id": "001",
+        "img_url_min": "static/img/3D/01.jpg",
+        "img_url_max": "static/img/3D/1.jpg"
+      },
+      {
+        "id": "002",
+        "img_url_min": "static/img/3D/02.jpg",
+        "img_url_max": "static/img/3D/2.jpg"
+      },
+      {
+        "id": "003",
+        "img_url_min": "static/img/3D/03.jpg",
+        "img_url_max": "static/img/3D/3.jpg"
+      },
+      {
+        "id": "004",
+        "img_url_min": "static/img/3D/04.jpg",
+        "img_url_max": "static/img/3D/4.jpg"
+      },
+      {
+        "id": "005",
+        "img_url_min": "static/img/3D/05.jpg",
+        "img_url_max": "static/img/3D/5.jpg"
+      },
+      {
+        "id": "006",
+        "img_url_min": "static/img/3D/06.jpg",
+        "img_url_max": "static/img/3D/6.jpg"
+      }
+    ]
+  }
+}

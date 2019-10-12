@@ -1,6 +1,6 @@
 <template>
   <div id="photo3d">
-    <photo3d-content></photo3d-content>
+    <photo3d-content :imgList=imgList></photo3d-content>
   </div>
 </template>
 
@@ -14,12 +14,31 @@ export default {
   },
   // 数据
   data () {
-    return {}
+    return {
+      imgList: ''
+    }
   },
   // 事件
-  methods: {},
+  methods: {
+    get3Dphoto () {
+      this.axios.get('/api/3dphoto.json')
+        .then(this.handleGet3DphotoInfoSucc)
+    },
+    handleGet3DphotoInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.imgList = data.list
+      }
+      // console.log(this.imgList)
+    }
+  },
   // 计算属性
-  computed: {}
+  computed: {},
+  // 生命周期函数实例挂载完成执行
+  mounted () {
+    this.get3Dphoto()
+  }
 }
 </script>
 
