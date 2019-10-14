@@ -115,7 +115,7 @@ export default {
   height 455px
   background-size 100%
   position relative
-  perspective 600px
+  perspective 1600px
   font-family "microsoft yahei"
   transform-style preserve-3d
   .page
