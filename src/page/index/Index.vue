@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <index-content></index-content>
+    <index-content :photoList=photoList></index-content>
   </div>
 </template>
 
@@ -14,12 +14,31 @@ export default {
   },
   // 数据
   data () {
-    return {}
+    return {
+      photoList: ''
+    }
   },
   // 事件
-  methods: {},
+  methods: {
+    getPhotoList () {
+      this.axios.get('/aoao/api/index.json')
+        .then(this.handleGetPhotoListInfoSucc)
+    },
+    handleGetPhotoListInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.photoList = data.list
+      }
+      console.log(this.photoList)
+    }
+  },
   // 计算属性
-  computed: {}
+  computed: {},
+  // 生命周期函数实例挂载完成执行
+  mounted () {
+    this.getPhotoList()
+  }
 }
 </script>
 

@@ -21,7 +21,7 @@ export default {
   // 事件
   methods: {
     get3Dphoto () {
-      this.axios.get('/api/3dphoto.json')
+      this.axios.get('/aoao/api/3dphoto.json')
         .then(this.handleGet3DphotoInfoSucc)
     },
     handleGet3DphotoInfoSucc (res) {

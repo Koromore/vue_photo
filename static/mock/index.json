@@ -1,0 +1,37 @@
+{
+  "ret": true,
+  "data": {
+    "list": [
+      {
+        "id": "001",
+        "to": "/photo3d",
+        "text": "3D相册"
+      },
+      {
+        "id": "002",
+        "to": "/photo3d",
+        "text": "3D相册"
+      },
+      {
+        "id": "003",
+        "to": "/photo3d",
+        "text": "3D相册"
+      },
+      {
+        "id": "004",
+        "to": "/photo3d",
+        "text": "3D相册"
+      },
+      {
+        "id": "005",
+        "to": "/photo3d",
+        "text": "3D相册"
+      },
+      {
+        "id": "006",
+        "to": "/photo3d",
+        "text": "3D相册"
+      }
+    ]
+  }
+}

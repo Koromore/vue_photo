@@ -11,10 +11,10 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
+      '/aoao/api': {
         target: 'http://127.0.0.1:8080',
         pathRewrite: {
-          '^/api': '/static/mock'
+          '^/aoao/api': '/static/mock'
         }
       }
     },
@@ -57,8 +57,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
+    // assetsPublicPath: '/', // 开发环境
+    assetsPublicPath: './', // 线上环境
     /**
      * Source Maps
      */

@@ -1,6 +1,6 @@
 <template>
   <div id="content">
-    <div v-for="(item, index) in list" :key="index" class="router_list">
+    <div v-for="(item, index) in photoList" :key="index" class="router_list">
       <router-link class="router" :to=item.to>{{item.text}}</router-link>
     </div>
   </div>
@@ -9,31 +9,11 @@
 <script>
 export default {
   name: 'Content',
+  props: {
+    photoList: ''
+  },
   data () {
-    return {
-      list: [
-        {
-          to: '/photo3d',
-          text: '3D相册'
-        },
-        {
-          to: '/photo3d',
-          text: '3D相册'
-        },
-        {
-          to: '/photo3d',
-          text: '3D相册'
-        },
-        {
-          to: '/photo3d',
-          text: '3D相册'
-        },
-        {
-          to: '/photo3d',
-          text: '3D相册'
-        }
-      ]
-    }
+    return {}
   },
   // 事件
   methods: {},
