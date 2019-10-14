@@ -1,16 +1,19 @@
 <template>
   <div id="index">
     <index-content :photoList=photoList></index-content>
+    <!-- <index-book></index-book> -->
   </div>
 </template>
 
 <script>
 import IndexContent from './components/content'
+import IndexBook from './components/book'
 export default {
   name: 'Content',
   // 组件注册
   components: {
-    IndexContent
+    IndexContent,
+    IndexBook
   },
   // 数据
   data () {
@@ -30,7 +33,7 @@ export default {
         const data = res.data
         this.photoList = data.list
       }
-      console.log(this.photoList)
+      // console.log(this.photoList)
     }
   },
   // 计算属性
