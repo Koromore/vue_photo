@@ -1,7 +1,7 @@
 <template>
   <div id="index">
-    <index-content :photoList=photoList></index-content>
-    <!-- <index-book></index-book> -->
+    <!-- <index-content :photoList=photoList></index-content> -->
+    <index-book></index-book>
   </div>
 </template>
 

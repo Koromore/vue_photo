@@ -5,7 +5,7 @@
     <div
       class="page page1"
       :class="[page_act == item.page ?
-      'page_next' : '']"
+      page_turn : '']"
       v-for="(item, index) in list"
       :key="index"
       :style=item.style
@@ -55,7 +55,8 @@ export default {
           page: 6,
           style: 'background: blue;z-index: 1;'
         }
-      ]
+      ],
+      page_turn: 'page_next'
     }
   },
   // 事件
@@ -69,6 +70,7 @@ export default {
       if (page < list.length - 1) {
         this.page_act += 1
         // console.log(page + '是')
+        this.page_turn = 'page_next'
       } else {
         this.page_act = 1
         // console.log(page + '否')
@@ -77,13 +79,14 @@ export default {
     },
     page_last () {
       let page = this.page_act * 1
-      let list = this.list
+      // let list = this.list
       // console.log(list.length)
       // console.log(page)
       // console.log(list.length - 1)
-      if (page < list.length - 1) {
+      if (page > 1) {
         this.page_act -= 1
         // console.log(page + '是')
+        this.page_turn = 'page_last'
       } else {
         // this.page_act = 1
         // console.log(page + '否')
@@ -103,7 +106,7 @@ export default {
 .page_next
   animation page_next 3s linear 1 forwards
 .page_last
-  animation page_next 3s linear 1 forwards
+  animation page_last 3s linear 1 forwards
 #page_left
   transform rotateY(-180deg)
   transform-origin 0% 50%
